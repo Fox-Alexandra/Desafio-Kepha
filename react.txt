@@ -25,67 +25,48 @@ export default class Calculadora extends Component {
             this.calcLitro()
         } else if (this.state.unidade === "Metro") { //entrar na função metro
             this.calcMetro()
-        } else if (this.state.unidade === "Quilo") {
-            this.calcQuilo()
-        } else if (this.state.unidade === "Graus Celcius (°C)") {
-            this.calcGraus()
-        } else if (this.state.valor === "") {
-            alert("Por favor, insira um valor!")
-        }else {
-            alert("Por favor, selecione a unidade de medida que deseja converter!")
         }
         
     }
 
-    calcLitro() { //função converter litros
-        var respValor1 = (this.state.valor * 33.814)+" us fl oz"
+    calcMetro() { //função converter metro
+        var respValor1 = (this.state.valor * 33.814)+"us fl oz"
+        var respUnidade1 = "Onça"
+        this.setState({respUnidade1: respUnidade1}) //recebe a unidade convertida
+        this.setState({respValor1: respValor1}) //recebe o valor convertido
+
+        var respValor2 = (this.state.valor * 0.26417)+"US gal lqd"
+        var respUnidade2 = "Galões"
+        this.setState({respUnidade2: respUnidade2}) //recebe a unidade convertida
+        this.setState({respValor2: respValor2}) //recebe o valor convertido
+    }
+
+    calcLitro() { //função converter litro
+        var respValor1 = (this.state.valor * 33.814)+"us fl oz"
         var respUnidade1 = "Onça: "
         this.setState({respUnidade1: respUnidade1}) //recebe a unidade convertida
         this.setState({respValor1: respValor1}) //recebe o valor convertido
 
-        var respValor2 = (this.state.valor * 0.26417)+" us gal lqd"
-        var respUnidade2 = "Galões: "
+        var respValor2 = (this.state.valor * 0.26417)+"US gal lqd"
+        var respUnidade2 = "Galões"
         this.setState({respUnidade2: respUnidade2}) //recebe a unidade convertida
         this.setState({respValor2: respValor2}) //recebe o valor convertido
     }
 
-    calcMetro() { //função converter metros
-        var respValor1 = (this.state.valor * 0.00062137)+" mi"
-        var respUnidade1 = "Milhas"
-        this.setState({respUnidade1: respUnidade1}) //recebe a unidade convertida
-        this.setState({respValor1: respValor1}) //recebe o valor convertido
+      // função para cadastrar participante
+    InsercaoValor(event){      
+        event.preventDefault();
 
-        var respValor2 = (this.state.valor * 3.2808)+" ft"
-        var respUnidade2 = "Pés"
-        this.setState({respUnidade2: respUnidade2}) //recebe a unidade convertida
-        this.setState({respValor2: respValor2}) //recebe o valor convertido
-    }
+        //seta um objeto para os participantes
+        let Valor = {
+            valor: this.state.valor,
+            unidade: this.state.unidade
+        }
 
-    calcQuilo() { //função converter quilos
-        var respValor1 = (this.state.valor *  2.2046)+" lb"
-        var respUnidade1 = "Libras: "
-        this.setState({respUnidade1: respUnidade1}) //recebe a unidade convertida
-        this.setState({respValor1: respValor1}) //recebe o valor convertido
-
-        var respValor2 = (this.state.valor * 35.274)+"oz"
-        var respUnidade2 = "Onças: "
-        this.setState({respUnidade2: respUnidade2}) //recebe a unidade convertida
-        this.setState({respValor2: respValor2}) //recebe o valor convertido
-    }
-
-    calcGraus() { //função converter graus
-        var respValor1 = (this.state.valor * (1) +  273.15 )+" K"
-        var respUnidade1 = "Kelvin: "
-        this.setState({respUnidade1: respUnidade1}) //recebe a unidade convertida
-        this.setState({respValor1: respValor1}) //recebe o valor convertido
-
-        var respValor2 = (this.state.valor * (9/5) + 32)+" °F"
-        var respUnidade2 = "Fahrenheit: "
-        this.setState({respUnidade2: respUnidade2}) //recebe a unidade convertida
-        this.setState({respValor2: respValor2}) //recebe o valor convertido
     }
 
 
+    
     render() {
         return (
             //div criada para a estilização do body
@@ -105,7 +86,7 @@ export default class Calculadora extends Component {
 
                     <div className="sombra_titulo"></div>
 
-                    <form 
+                    <form  onSubmit={this.InsercaoValor.bind(this)}
                         name="calculadora" 
                         method="post" 
                         id="formulario">
@@ -146,16 +127,12 @@ export default class Calculadora extends Component {
                     </form>
 
                     <div id="resultado">
-                        <div className="Resultado1">
-                            <h2>{this.state.respUnidade1}
-                            </h2> {/* Resultado printado da unidade de medida */}
-                            <span>{this.state.respValor1}</span> {/* Resultado printado do valor */}
-                        </div>
-                        <hr/>
-                        <div className= "Resultado2">
-                            <h2>{this.state.respUnidade2}</h2> {/* Resultado printado da unidade de medida */}
-                            <span>{this.state.respValor2}</span> {/* Resultado printado do valor */}
-                        </div>
+                        <p className="vResultado">
+                            <h2>{this.state.respUnidade}</h2> {/* Resultado printado da unidade de medida */}
+                            <h2>{this.state.respValor}</h2> {/* Resultado printado do valor */}
+
+                            
+                        </p>
                     </div>
 
                 </section>
