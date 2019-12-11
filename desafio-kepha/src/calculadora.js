@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../src/assets/CSS/style.css';
-import poster from '../src/assets/Imagens/poster3.png';
+import poster from '../src/assets/Imagens/poster7.png';
 
 export default class Calculadora extends Component {
 
