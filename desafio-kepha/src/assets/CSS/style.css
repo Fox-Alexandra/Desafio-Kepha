@@ -139,7 +139,6 @@ main {
     margin: 4em auto;
     display: flex;
     justify-content: center;
-    
     border: 1px solid #6DE0AE;
     box-shadow: 4px 4px 16px rgb(32, 44, 38);
 }
@@ -177,7 +176,7 @@ main {
 
 .Resultado2 h2 {
     height: 1em;
-    width: 8vw;
+    width: 10vw;
     margin-bottom: .7em;
     text-align: center;
 }

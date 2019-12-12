@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import '../src/assets/CSS/style.css';
-import poster from '../src/assets/Imagens/poster7.png';
 
-export default class Calculadora extends Component {
+
+export default class Formulario extends Component {
 
     constructor()
     {
@@ -51,12 +50,12 @@ export default class Calculadora extends Component {
 
     calcMetro() { //função converter metros
         var respValor1 = (this.state.valor * 0.00062137)+" mi"
-        var respUnidade1 = "Milhas: "
+        var respUnidade1 = "Milhas"
         this.setState({respUnidade1: respUnidade1}) //recebe a unidade convertida
         this.setState({respValor1: respValor1}) //recebe o valor convertido
 
         var respValor2 = (this.state.valor * 3.2808)+" ft"
-        var respUnidade2 = "Pés: "
+        var respUnidade2 = "Pés"
         this.setState({respUnidade2: respUnidade2}) //recebe a unidade convertida
         this.setState({respValor2: respValor2}) //recebe o valor convertido
     }
@@ -85,82 +84,52 @@ export default class Calculadora extends Component {
         this.setState({respValor2: respValor2}) //recebe o valor convertido
     }
 
-
     render() {
         return (
-            //div criada para a estilização do body
-            <div className="body"> 
-            <main>
+            <>
+                <form 
+                    name="calculadora" 
+                    method="post" 
+                    id="formulario">
 
-                <section id="poster"> 
-                    <img src={poster} alt="" />
-                </section>
+                    {/* sessao aonde será inserido o valor que deseja ser convertido */}
+                    <div className="valor"> 
+                        <label htmlFor="valor">Valor que deseja converter<br/></label>
+                        <input 
+                            value={this.state.valor}
+                            type="number" 
+                            name="valor" 
+                            id="valor"
+                            onChange={event => this.setState({valor: event.target.value})}
+                        />
+                    </div>
 
-                <div className="titulo">
-                    <h1>Conversor de medidas</h1>
-                </div>
+                    {/* sessao aonde será selecionado a unidade de medida desejada que deseja ser convertido */}
+                    <div className="unidade">
+                        <label htmlFor="unidade">Unidade de Medida<br/></label>
+                        <select name="unidade" id="unidade"
+                            value={this.state.unidade} 
+                            onChange={event => this.setState({unidade: event.target.value})}
+                        >
+                            <option disabled>Unidade</option>
+                            <option >Selecione</option>
+                            <option>Litro</option>
+                            <option>Metro</option>
+                            <option>Quilo</option>
+                            <option>Graus Celcius (°C)</option>
+                        </select>
+                    </div>
 
-                {/* sessao aonde contém o a calculadora do app */}
-                <section id="conteudo">
-
-                    <div className="sombra_titulo"></div>
-
-                    <form 
-                        name="calculadora" 
-                        method="post" 
-                        id="formulario">
-
-                        {/* sessao aonde será inserido o valor que deseja ser convertido */}
-                        <div className="valor"> 
-                            <label htmlFor="valor">Valor que deseja converter<br/></label>
-                            <input 
-                                value={this.state.valor}
-                                type="number" 
-                                name="valor" 
-                                id="valor"
-                                onChange={event => this.setState({valor: event.target.value})}
-                            />
-                        </div>
-
-                        {/* sessao aonde será selecionado a unidade de medida desejada que deseja ser convertido */}
-                        <div className="unidade">
-                            <label htmlFor="unidade">Unidade de Medida<br/></label>
-                            <select name="unidade" id="unidade"
-                                value={this.state.unidade} 
-                                onChange={event => this.setState({unidade: event.target.value})}
-                            >
-                                <option disabled>Unidade</option>
-                                <option >Selecione</option>
-                                <option>Litro</option>
-                                <option>Metro</option>
-                                <option>Quilo</option>
-                                <option>Graus Celcius (°C)</option>
-                            </select>
-                        </div>
-
-                        <div id="buttons">
+                    <div id="buttons">
                         <div>
                             <button  className="button_calcular" onClick={this.atualizaEstado.bind(this)}>Calcular</button >
                         </div>
                     </div>
-                    </form>
-
-                    <div id="resultado">
-                        <div className="Resultado1">
-                            <h2>{this.state.respUnidade1}
-                            </h2> {/* Resultado printado da unidade de medida */}
-                            <span>{this.state.respValor1}</span> {/* Resultado printado do valor */}
-                        </div>
-                        <hr/>
-                        <div className= "Resultado2">
-                            <h2>{this.state.respUnidade2}</h2> {/* Resultado printado da unidade de medida */}
-                            <span>{this.state.respValor2}</span> {/* Resultado printado do valor */}
-                        </div>
-                    </div>
-
-                </section>
-            </main>
-            </div>
+                </form>
+            </>
         );
     }
+
 }
+
+export default Formulario;
