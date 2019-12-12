@@ -1,0 +1,11 @@
+C:\Users\Alexandra\Desktop\GitHub\Desafio-Kepha\TesteDeLogica\Execício1\bin\Debug\netcoreapp3.0\Desafio-Kepha.exe
+C:\Users\Alexandra\Desktop\GitHub\Desafio-Kepha\TesteDeLogica\Execício1\bin\Debug\netcoreapp3.0\Desafio-Kepha.deps.json
+C:\Users\Alexandra\Desktop\GitHub\Desafio-Kepha\TesteDeLogica\Execício1\bin\Debug\netcoreapp3.0\Desafio-Kepha.runtimeconfig.json
+C:\Users\Alexandra\Desktop\GitHub\Desafio-Kepha\TesteDeLogica\Execício1\bin\Debug\netcoreapp3.0\Desafio-Kepha.runtimeconfig.dev.json
+C:\Users\Alexandra\Desktop\GitHub\Desafio-Kepha\TesteDeLogica\Execício1\bin\Debug\netcoreapp3.0\Desafio-Kepha.dll
+C:\Users\Alexandra\Desktop\GitHub\Desafio-Kepha\TesteDeLogica\Execício1\bin\Debug\netcoreapp3.0\Desafio-Kepha.pdb
+C:\Users\Alexandra\Desktop\GitHub\Desafio-Kepha\TesteDeLogica\Execício1\obj\Debug\netcoreapp3.0\Desafio-Kepha.csprojAssemblyReference.cache
+C:\Users\Alexandra\Desktop\GitHub\Desafio-Kepha\TesteDeLogica\Execício1\obj\Debug\netcoreapp3.0\Desafio-Kepha.AssemblyInfoInputs.cache
+C:\Users\Alexandra\Desktop\GitHub\Desafio-Kepha\TesteDeLogica\Execício1\obj\Debug\netcoreapp3.0\Desafio-Kepha.AssemblyInfo.cs
+C:\Users\Alexandra\Desktop\GitHub\Desafio-Kepha\TesteDeLogica\Execício1\obj\Debug\netcoreapp3.0\Desafio-Kepha.dll
+C:\Users\Alexandra\Desktop\GitHub\Desafio-Kepha\TesteDeLogica\Execício1\obj\Debug\netcoreapp3.0\Desafio-Kepha.pdb
