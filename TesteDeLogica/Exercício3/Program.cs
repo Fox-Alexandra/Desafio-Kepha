@@ -71,7 +71,7 @@ namespace Exercício3 {
 
             //Para i menor ou igual a quantidade de elementos somados
             //os elementos que foram somados serão printados no console
-            for (int i = 1; i <= valores.Count; i++)
+            for (int i = 0; i <= valores.Count; i++)
             {
                 Console.Write ($"{i},");
 

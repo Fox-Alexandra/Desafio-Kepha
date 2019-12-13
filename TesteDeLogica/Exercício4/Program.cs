@@ -22,55 +22,29 @@ namespace Exercício4
                 contador++;
             }
 
-            //para a menor que o tamanho do meu array entao o a conta
-            for (int a = 0; a < array.Length; a++) 
-            {
-                //para sort menor que o tamanho do lido da direita para a esquerda conta o sort
-                for (int sort = 0; sort < array.Length - 1; sort++) 
+            //para j menor que o tamanho do meu array entao o j conta
+            //Quando j atingir o tamanho do array o loop para
+            for (int j = 0; j < array.Length; j ++) {                
+                    
+                //para i menor que o tamanho do array, i recebe o valor de j+1 e conta 
+                //Quando i atingir o tamanho doa array o loop para
+                for (int i = j+1; i < array.Length; i++)
                 {
-                    // se o array que recebe o valor de sort for menor que o array crescente
-                    //entao aux recebe o valor de sort + 1
-                    // sort +1 recebe o valor de sort
-                    //sort recebe o valor de aux
-                    //assim dentro do loop o o valor será substituido dentro das variaveis e assim
-                    //criará uma sequencia crescente
-                    if (array[sort] > array[sort + 1]) 
+                    //cada elemento da posição i será comparado com o elemento da posição j + 1, ou seja, um 
+                    //elemento da posição 2 será comparado com o elemento da posição 3. Caso o elemento da 
+                    //posição 2 for maior que o da posição 3, eles trocam de lugar e assim sucessivamente.                     
+                    if (array[j] > array[i])
                     {
-                        aux = array[sort + 1];
-                        array[sort + 1] = array[sort];
-                        array[sort] = aux;
+                        aux = array[j];
+
+                        array[j] = array[i];
+
+                        array[i] = aux;
                     }
                 }
             }
 
             Console.WriteLine("Input array: ");
-
-            //enquanto o contadorB for menor que o tamanho do array
-            //a função ira printar na tela os elementos do array
-            for (int i = 0; i < array.Length; i++) {
-                Console.Write(array[i] + " ");
-            }
-
-            for (int ord = 0; ord < array.Length; ord ++) {
-                //para sort menor que o tamanho do lido da direita para a esquerda conta o sort
-                for (int sort = 0; sort > array.Length + 1; sort++) 
-                {
-                    // se o array que recebe o valor de sort for menor que o array crescente
-                    //entao aux recebe o valor de sort + 1
-                    // sort +1 recebe o valor de sort
-                    //sort recebe o valor de aux
-                    //assim dentro do loop o o valor será substituido dentro das variaveis e assim
-                    //criará uma sequencia crescente
-                    if (array[sort] < array[sort - 1]) 
-                    {
-                        aux = array[sort + 1];
-                        array[sort + 1] = array[sort];
-                        array[sort] = aux;
-                    }
-                }
-            }
-
-            Console.WriteLine("\noutput array: ");
 
             //enquanto o contadorB for menor que o tamanho do array
             //a função ira printar na tela os elementos do array
