@@ -69,13 +69,12 @@ namespace Exercício3 {
             //utilizado na estilização do console
             Console.Write ("Tamanho mínimo do subarray é: {");
 
-            //Para i menor ou igual a quantidade de elementos somados
-            //os elementos que foram somados serão printados no console
-            for (int i = 0; i <= valores.Count; i++)
+            //Para cada item contido na lista valores, será printado os elementos desta lista
+            //os elementos que foram somados serão printados no consol
+            foreach (var item in valores)
             {
-                Console.Write ($"{i},");
-
-            }   
+                System.Console.Write($"{item},");
+            }
 
             //utilizado na estilização do console
             Console.Write ("}");

@@ -22,12 +22,10 @@ namespace Exercício4
                 contador++;
             }
 
-            //para j menor que o tamanho do meu array entao o j conta
-            //Quando j atingir o tamanho do array o loop para
+            //Os elementos do array serão comparados 
             for (int j = 0; j < array.Length; j ++) {                
                     
-                //para i menor que o tamanho do array, i recebe o valor de j+1 e conta 
-                //Quando i atingir o tamanho doa array o loop para
+
                 for (int i = j+1; i < array.Length; i++)
                 {
                     //cada elemento da posição i será comparado com o elemento da posição j + 1, ou seja, um 
