@@ -42,9 +42,6 @@ namespace Exercício3 {
                 }
             }
 
-            //Printa no console o valor da soma
-            Console.WriteLine ($"o valor da soma é: {soma}");
-
             //utilizado na estilização do console
             Console.Write ("array [] = {");
 
