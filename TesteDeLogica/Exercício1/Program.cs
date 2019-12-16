@@ -30,8 +30,7 @@ namespace Exercício1 {
             int index = -1; //caracteres repetidos receberão o valor -1
             int i; 
         
-            // meu i inicia com 0, para i  menor que o tamanho da minha string
-            // entao i será contado i++
+            //Comparando todos os elementos da string
             for (i = 0; i < palavra.Length; i++) 
             { 
                 //se meu vetor contador[palavra[i]] for igual a 1 (se o caracter nao repetir recebe 1)
