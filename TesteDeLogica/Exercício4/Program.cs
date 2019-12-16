@@ -30,7 +30,7 @@ namespace Exercício4
                 {
                     //cada elemento da posição i será comparado com o elemento da posição j + 1, ou seja, um 
                     //elemento da posição 2 será comparado com o elemento da posição 3. Caso o elemento da 
-                    //posição 2 for maior que o da posição 3, eles trocam de lugar e assim sucessivamente.                     
+                    //posição 2 for maior que o da posição 3, eles trocam de lugar e assim sucessivamente...                    
                     if (array[j] > array[i])
                     {
                         aux = array[j];
